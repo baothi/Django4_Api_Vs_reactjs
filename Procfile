@@ -1,0 +1,1 @@
+web: gunicorn Django4_Api_Vs_reactjs.wsgi
