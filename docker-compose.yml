@@ -1,0 +1,29 @@
+# dokku apps:create qatestapi
+#   702  dokku git:initialize qatestapi
+#   703  dokku postgres:create qatestapi
+#   704  dokku postgres:link qatestapi qatestapi
+
+
+# dokku git:initialize qatestapi
+#   761  dokku postgres:create qatestapi
+#   762  dokku postgres:link qatestapi qatestapi
+#   763  dokku domains:set qatestapi qatestapi.site
+#   764  dokku domains:report
+#   765  dokku proxy:report
+#   766  dokku proxy:ports-set qatestapi http:80:7000
+#   767  dokku proxy:report
+#   768  dokku domains:set qatestapi qatestapi.site
+#   769  history | grep data
+#   770  history | grep migra
+#   771  dokku run qatestapi python manage.py migrate
+#   772  dokku run qatestapi python manage.py createsuperuser
+#   773  dokku config:set --no-restart qatestapi DOKKU_LETSENCRYPT_EMAIL=baothi246@gmail.com
+#   774  dokku letsencrypt:enable qatestapi
+#   775  dokku proxy:report qatestapi
+#   776  dokku letsencrypt:ls
+#   777  dokku letsencrypt:help
+#   778  dokku letsencrypt:list
+#   779  dokku letsencrypt:auto-renew phongthuy_thanhnhan
+#   780  dokku letsencrypt:auto-renew django_rest_framework
+#   781  dokku letsencrypt:auto-renew qatestapi
+#   782  dokku letsencrypt:cron-job --add
